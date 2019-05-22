@@ -17,17 +17,17 @@ void demoV03_fibDemoComp(){
 
 void demoV03_exp(){
     int a = 2;
-    int b = 9;
+    int b = 15;
 
-    std::cout << "Iteration:            " << 2 << "^" << b << " = " << exp00(a,b) << std::endl;
-    std::cout << "einfache Rekursion:   " << 2 << "^" << b << " = " << exp01(a,b) << std::endl;
-    std::cout << "erweiterte Rekursion: " << 2 << "^" << b << " = " << exp02(a,b) << std::endl;
+    std::cout << "Iteration:            " << a << "^" << b << " = " << exp00(a,b) << std::endl;
+    std::cout << "einfache Rekursion:   " << a << "^" << b << " = " << exp01(a,b) << std::endl;
+    std::cout << "erweiterte Rekursion: " << a << "^" << b << " = " << exp02(a,b) << std::endl;
 
 
 }
 
 void demoV03_TurmVonHanoi(){
-    towerOfHanoi(3, 'A', 'B', 'C');
+    towerOfHanoi(100, 'A', 'B', 'C');
 }
 
 

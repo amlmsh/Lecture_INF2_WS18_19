@@ -5,6 +5,7 @@
  *      Author: aml
  */
 
+#include <iostream>
 #include <stdio.h>
 #include "V01.H"
 
@@ -51,55 +52,22 @@ void demoV01_Rechteck(){
 
 	Point2D p1, p2;
 
+	p1.X = 5;
+	p1.Y = 3;
+
 	Rectangle r;
 
 	printf("\n\n p1: "); out(p1);
 	printf("\n p2: ");   out(p2);
 
+    set(&r, p1, p2);
 
-	r.P1 = p1;
-	r.P2 = p2;
+    std::cout << std::endl << "area: " << optArea(r) << std::endl;
 
+    r.AREA = -3;
 
-	printf("\n\n Output Rectangle: ");  out(r);
-	printf("\n area (units): %i \n", area(r));
-
-
-	p1.X = 0;
-	p1.Y = 0;
-	p2.X = 12;
-	p2.Y = 4;
-
-	r.P1 = p1;
-	r.P2 = p2;
-
-
-	printf("\n\n Output Rectangle: "); out(r);
-	printf("\n area (units): %i \n", area(r));
-
-
-	printf("\n area (units): %i \n\n\n", optArea(r));
-
-
-
-	Point2D p3;
-	p3.X = -12;
-	p3.Y = -4;
-
-	set(&r, p2, p3);
-
-	printf("\n\n Output Rectangle 2\n");
-	out(r);
-	printf("\n area (units): %i \n", area(r));
-
-	printf("\n area (units): %i \n\n\n", optArea(r));
-
-	r.P1 = p1;
-	printf("\n\n Output Rectangle 3\n");out(r);
-
-	printf("\n area (units): %i \n", area(r));
-
-	printf("\n area (units): %i \n\n\n", optArea(r));
+    out(r);
+    std::cout << std::endl << "area: " << optArea(r) << std::endl;
 
 }
 
