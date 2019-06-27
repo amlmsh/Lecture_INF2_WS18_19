@@ -16,8 +16,8 @@ CFLAGS=$(WXCFLAGS) -I$(INCLDIR) -I.
 LIBS=$(WXLIBFLAGS) -L$(LIBDIR1) -L$(LIBDIR2)  -lm 
 
 
-main:	main.o V01.o V03.o V05.o
-	g++ -o main main.o V01.o V03.o V05.o  $(LIBS)
+main:	main.o V01.o V03.o V05.o V09.o
+	g++ -o main main.o V01.o V03.o V05.o V09.o  $(LIBS)
 
 main.o:	main.C
 	g++ -c $(CFLAGS) main.C
@@ -40,6 +40,9 @@ V03.o:	V03.C V03.H
 
 V05.o:	V05.C V05.H
 	g++ -c $(CFLAGS) V05.C
+
+V09.o:	V09.C V09.H
+	g++ -c $(CFLAGS) V09.C
 
 runMain:	main
 	./main
