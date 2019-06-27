@@ -5,10 +5,13 @@
 
 void demoV09(){
 
+    using namespace V09;
 
-    V09::List<int> l;
     int i;
     int n = 7;
+
+    List<int> l;
+
     for(i=0;i<n;i++){
         l.append(rand() % n);
         l.print();
@@ -17,6 +20,8 @@ void demoV09(){
         l.print();
         cout << endl;
     }
+
+
 
     for(i=0;i<n+5;i++){
             l.removeLast();
