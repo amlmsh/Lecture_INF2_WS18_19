@@ -6,6 +6,7 @@
 #include "V03.H"
 #include "V05.H"
 #include "V09.H"
+#include "V10.H"
 
 using namespace std;
 
@@ -26,7 +27,8 @@ int main() {
   //demoV03_TurmVonHanoi();
   //demoV05_komplexeZahlen();
   //demoV05_Klassenzeiger();
-  demoV09();
+  //demoV09();
+  demoV10();
 
   return 0;
 };
