@@ -16,8 +16,8 @@ CFLAGS=$(WXCFLAGS) -I$(INCLDIR) -I.
 LIBS=$(WXLIBFLAGS) -L$(LIBDIR1) -L$(LIBDIR2)  -lm 
 
 
-main:	main.o V01.o V03.o V05.o V09.o V10.o
-	g++ -o main main.o V01.o V03.o V05.o V09.o V10.o  $(LIBS)
+main:	main.o V01.o V03.o V05.o V09.o V10.o V11.o
+	g++ -o main main.o V01.o V03.o V05.o V09.o V10.o V11.o  $(LIBS)
 
 main.o:	main.C
 	g++ -c $(CFLAGS) main.C
@@ -47,9 +47,15 @@ V09.o:	V09.C V09.H
 V10.o:	V10.C V10.H
 	g++ -c $(CFLAGS) V10.C
 
+V11.o:	V11.C V11.H
+	g++ -c $(CFLAGS) V11.C
+
 runMain:	main
 	./main
 
+
+doc:
+	doxygen Doxyfile
 
 clean:
 	rm  *.o  main prakAufg03Main

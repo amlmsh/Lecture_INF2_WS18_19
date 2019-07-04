@@ -5,6 +5,14 @@
 using namespace std;
 using namespace V05;
 
+void demoV05_NmbSet(){
+    using namespace Numberset;
+
+    //NumberSet  a;
+    //a.sort();
+}
+
+
 void demoV05_komplexeZahlen(){
 
     std::cout << "demo V05 komplexe Zahlen" << std::endl;

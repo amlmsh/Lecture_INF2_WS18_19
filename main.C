@@ -7,6 +7,7 @@
 #include "V05.H"
 #include "V09.H"
 #include "V10.H"
+#include "V11.H"
 
 using namespace std;
 
@@ -15,7 +16,7 @@ using namespace std;
 
 int main() {
 
-
+  srand(time(NULL));
 
 
 
@@ -28,7 +29,9 @@ int main() {
   //demoV05_komplexeZahlen();
   //demoV05_Klassenzeiger();
   //demoV09();
-  demoV10();
+  //demoV10();
+
+  demoV11_TestList();
 
   return 0;
 };
